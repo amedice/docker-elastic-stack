@@ -5,3 +5,9 @@
 
 FROM centos
 MAINTAINER Alex S. Médice <alex.medice@gmail.com>
+
+# Upgrading system
+RUN yum -y upgrade
+
+# Install Java
+RUN yum install -y java-1.8.0-openjdk
