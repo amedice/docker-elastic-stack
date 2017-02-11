@@ -30,4 +30,4 @@ RUN rm elasticsearch-5.0.2.tar.gz
 
 # Run
 USER elasticsearch
-RUN ./elasticsearch-5.0.2/bin/elasticsearch
+#RUN ./elasticsearch-5.0.2/bin/elasticsearch
