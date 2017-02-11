@@ -1,5 +1,5 @@
 #docker build -t amedice/elasticsearch .
-#docker run -d -it -p 9200:9200 --name elasticsearch amedice/elasticsearch
+#docker run -d -it -p 9200:9200 -p 9300:9300 --name elasticsearch amedice/elasticsearch
 #docker exec -it elasticsearch /bin/bash
 #docker rm -f elasticsearch
 
@@ -31,4 +31,4 @@ RUN rm elasticsearch-5.0.2.tar.gz
 # Run
 USER elasticsearch
 #RUN export ES_JAVA_OPTS='-Xms512m -Xmx512m'
-RUN ./elasticsearch-5.0.2/bin/elasticsearch
+#RUN ./elasticsearch-5.0.2/bin/elasticsearch
