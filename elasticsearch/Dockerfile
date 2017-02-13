@@ -1,5 +1,5 @@
 #docker build -t amedice/elasticsearch .
-#docker run -d -it -p 9200:9200 --name elasticsearch amedice/elasticsearch
+#docker run -d -it -p 9200:9200 -p 9300:9300 --name elasticsearch amedice/elasticsearch
 #docker exec -it elasticsearch /bin/bash
 #docker rm -f elasticsearch
 
@@ -12,14 +12,24 @@ RUN yum -y upgrade
 # Install tools
 RUN yum -y install wget vim
 
+# Create user
+RUN adduser -m elasticsearch
+WORKDIR /home/elasticsearch
+
 # Install Java
-RUN yum install -y java-1.8.0-openjdk
+COPY jre-8u121-linux-x64.rpm /home/elasticsearch/
+RUN rpm -ivh jre-8u121-linux-x64.rpm
+RUN rm jre-8u121-linux-x64.rpm
 
 # Install Elasticsearch
-RUN adduser elasticsearch
-run mkdir -p /home/elasticsearch
-WORKDIR /home/elasticsearch
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.tar.gz
 RUN sha1sum elasticsearch-5.0.2.tar.gz 
 RUN tar -xzf elasticsearch-5.0.2.tar.gz
-RUN ./elasticsearch-5.0.2/bin/elasticsearch
+RUN chown -Rf elasticsearch:elasticsearch ./elasticsearch-5.0.2
+RUN rm elasticsearch-5.0.2.tar.gz
+
+# run
+USER elasticsearch
+ENV ES_JAVA_OPTS='-Xms512m -Xmx512m'
+EXPOSE 9200 9300
+CMD ["./elasticsearch-5.0.2/bin/elasticsearch"]
