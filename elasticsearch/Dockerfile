@@ -30,8 +30,8 @@ RUN rpm --install elasticsearch-5.0.2.rpm
 # Run
 ENV ES_JAVA_OPTS='-Xms512m -Xmx512m'
 EXPOSE 9200 9300
-RUN yum clean all
-#RUN systemctl daemon-reload
+RUN systemctl daemon-reload
+RUN systemctl enable elasticsearch.service
 RUN systemctl start elasticsearch.service
 
 CMD ["/usr/sbin/init"]
