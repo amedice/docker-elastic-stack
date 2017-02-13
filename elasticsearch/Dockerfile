@@ -1,16 +1,16 @@
-#docker build -t amedice/elasticsearch .
-#docker run -d -it -p 9200:9200 -p 9300:9300 --name elasticsearch amedice/elasticsearch
+#docker build --rm -t amedice/elasticsearch .
+#docker run -d -it -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 9200:9200 -p 9300:9300 --name elasticsearch amedice/elasticsearch
 #docker exec -it elasticsearch /bin/bash
 #docker rm -f elasticsearch
 
-FROM centos
+FROM amedice/centos
 MAINTAINER Alex S. Médice <alex.medice@gmail.com>
 
 # Upgrading system
 RUN yum -y upgrade
 
 # Install tools
-RUN yum -y install wget vim
+RUN yum -y install wget vim iptables-services
 
 # Create user
 RUN adduser -m elasticsearch
@@ -21,15 +21,17 @@ COPY jre-8u121-linux-x64.rpm /home/elasticsearch/
 RUN rpm -ivh jre-8u121-linux-x64.rpm
 RUN rm jre-8u121-linux-x64.rpm
 
-# Install Elasticsearch
-RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.tar.gz
-RUN sha1sum elasticsearch-5.0.2.tar.gz 
-RUN tar -xzf elasticsearch-5.0.2.tar.gz
-RUN chown -Rf elasticsearch:elasticsearch ./elasticsearch-5.0.2
-RUN rm elasticsearch-5.0.2.tar.gz
+# Instal Elasticsearch
+RUN rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.2.rpm
+RUN sha1sum elasticsearch-5.0.2.rpm 
+RUN rpm --install elasticsearch-5.0.2.rpm
 
-# run
-USER elasticsearch
+# Run
 ENV ES_JAVA_OPTS='-Xms512m -Xmx512m'
 EXPOSE 9200 9300
-CMD ["./elasticsearch-5.0.2/bin/elasticsearch"]
+RUN yum clean all
+#RUN systemctl daemon-reload
+RUN systemctl start elasticsearch.service
+
+CMD ["/usr/sbin/init"]
