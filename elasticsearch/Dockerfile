@@ -28,7 +28,8 @@ RUN tar -xzf elasticsearch-5.0.2.tar.gz
 RUN chown -Rf elasticsearch:elasticsearch ./elasticsearch-5.0.2
 RUN rm elasticsearch-5.0.2.tar.gz
 
-# Run
+# run
 USER elasticsearch
 ENV ES_JAVA_OPTS='-Xms512m -Xmx512m'
-RUN ./elasticsearch-5.0.2/bin/elasticsearch
+EXPOSE 9200 9300
+CMD ["./elasticsearch-5.0.2/bin/elasticsearch"]
