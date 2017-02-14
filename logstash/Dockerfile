@@ -7,6 +7,8 @@ FROM logstash
 MAINTAINER Alex S. Médice <alex.medice@gmail.com>
 
 #RUN logstash-plugin install logstash-filter-de_dot
-#COPY logstash.conf /some/config-dir/
 
-#CMD ["-f", "/some/config-dir/logstash.conf"]
+#COPY logstash-app.conf /etc/logstash/config.d/logstash-app.conf
+#COPY logstash-server.conf /etc/logstash/config.d/logstash-server.conf
+
+#CMD ["-f", "/etc/logstash/config.d/logstash-app.conf"]
