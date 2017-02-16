@@ -1,5 +1,5 @@
 #docker build --rm -t amedice/logstash .
-#docker run -d -p 9200:9200 --name logstash1 amedice/logstash
+#docker run -d --link elasticsearch1 --network=dockerelasticstack_default --name logstash1 amedice/logstash
 #docker exec -it logstash1 /bin/bash
 #docker rm -f logstash1
 
@@ -18,3 +18,4 @@ MAINTAINER Alex S. Médice <alex.medice@gmail.com>
 COPY ./exemple-csv.conf /etc/logstash/conf.d/exemple-csv.conf
 COPY ./onibus.csv /tmp/onibus.csv
 #logstash -f /etc/logstash/conf.d/exemple-csv.conf -l /tmp/log1.txt --debug
+CMD ["-f", "/etc/logstash/conf.d/exemple-csv.conf"]
