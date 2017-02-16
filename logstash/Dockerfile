@@ -15,7 +15,14 @@ MAINTAINER Alex S. Médice <alex.medice@gmail.com>
 
 #CMD ["-f", "/etc/logstash/config.d/logstash-app.conf"]
 
-COPY ./exemple-csv.conf /etc/logstash/conf.d/exemple-csv.conf
-COPY ./onibus.csv /tmp/onibus.csv
+#COPY ./exemple-csv.conf /etc/logstash/conf.d/exemple-csv.conf
+#COPY ./onibus.csv /tmp/onibus.csv
 #logstash -f /etc/logstash/conf.d/exemple-csv.conf -l /tmp/log1.txt --debug
-CMD ["-f", "/etc/logstash/conf.d/exemple-csv.conf"]
+#CMD ["-f", "/etc/logstash/conf.d/exemple-csv.conf"]
+
+RUN mkdir -p /tmp/logs
+RUN chmod 777 /tmp/logs
+COPY ./logstash-app.conf /etc/logstash/conf.d/logstash-app.conf
+COPY ./logs /tmp/logs
+#logstash -f /etc/logstash/conf.d/logstash-app.conf -l /tmp/log1.txt --debug
+CMD ["-f", "/etc/logstash/conf.d/logstash-app.conf"]
