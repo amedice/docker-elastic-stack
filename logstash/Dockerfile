@@ -1,12 +1,12 @@
 #docker build --rm -t amedice/logstash .
-#docker run -d --link elasticsearch1 --network=dockerelasticstack_default --name logstash1 amedice/logstash
+#docker run --link elasticsearch1 --network=dockerelasticstack_default --name logstash1 amedice/logstash
 #docker exec -it logstash1 /bin/bash
 #docker rm -f logstash1
 
 FROM logstash
 MAINTAINER Alex S. Médice <alex.medice@gmail.com>
 
-#RUN logstash-plugin install logstash-filter-de_dot
+RUN logstash-plugin install logstash-filter-multiline
 
 #COPY log-app1.xml /var/log/log-app1.xml
 

@@ -1,0 +1,47 @@
+input {
+  file {
+    type => "osb-app-consumer"
+    start_position => "beginning"
+    path => [
+    					"/tmp/logs/CONSUMER_*.log"
+    				]
+		tags => [osb,app,consumer]
+  }
+  file {
+    type => "osb-app-enablement"
+    start_position => "beginning"
+    path => [
+    					"/tmp/logs/ENABLEMENT_*.log"
+    				]
+		tags => [osb,app,enablement]
+  }
+  file {
+    type => "osb-app-enterprise"
+    start_position => "beginning"
+    path => [
+    					"/tmp/logs/ENTERPRISE_*.log"
+    				]
+		tags => [osb,app,enterprise]
+  }
+}
+filter {
+  multiline {
+    type => "gflogs"
+    pattern => "\[\#\|\d{4}"
+    negate => true
+    what => "previous"
+  } 
+  grok {
+    match => { 
+    	"message" => "\[%{DATA:msg_timestamp}\] \[%{DATA:msg_level}\] \[OSBLogger] ::  \[ID: %{DATA:msg_id} => %{DATA:msg_inout}] >> %{DATA:msg_xml}</S:Body>" 
+    }
+  }
+}
+output {
+  elasticsearch { 
+    hosts => ["elasticsearch1:9200"] 
+  }
+  stdout { 
+    codec => rubydebug 
+  }
+}
