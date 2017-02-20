@@ -1,0 +1,31 @@
+<oracle.tip.adapter.apps.AppsConnectionFactory> ConnectionManager cm: weblogic.connector.outbound.ConnectionManagerImpl@32588c0d-eis/Apps/Apps ManagedConnectionFactory mcf: oracle.tip.adapter.apps.AppsManagedConnectionFactory@4303022b
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/2189330166000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/2193658900000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/3789652484000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/6091541622000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/6092702301000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/51342883989000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/73289253086000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/74845171040000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/77465056634000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/88590116820000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/89445277568000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/91925704040000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/154398472206000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/154399526282000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/156488995762000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

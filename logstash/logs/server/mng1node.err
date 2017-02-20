@@ -1,0 +1,38 @@
+<oracle.tip.adapter.apps.AppsConnectionFactory> ConnectionManager cm: weblogic.connector.outbound.ConnectionManagerImpl@32f414fc-eis/Apps/Apps ManagedConnectionFactory mcf: oracle.tip.adapter.apps.AppsManagedConnectionFactory@4303022b
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/2124576907000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/2522329235000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/6127262372000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/8553300050000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/73355291480000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/76207566405000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/89380983413000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/90461506725000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/154333739780000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/154463516924000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: /app/prd1bea/wlsdom/domosb116qa3/sbgen/alsbejbtransport/329238397361000/src/jws/com/bea/wli/sb/transports/ejb/Jws.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+java.lang.ArrayIndexOutOfBoundsException: overflow detected
+	at weblogic.utils.http.HttpRequestParser.checkOverflow(HttpRequestParser.java:288)
+	at weblogic.utils.http.HttpRequestParser.incPos(HttpRequestParser.java:278)
+	at weblogic.utils.http.HttpRequestParser.method(HttpRequestParser.java:414)
+	at weblogic.utils.http.HttpRequestParser.startLine(HttpRequestParser.java:359)
+	at weblogic.utils.http.HttpRequestParser.parse(HttpRequestParser.java:323)
+	at weblogic.utils.http.HttpRequestParser.parse(HttpRequestParser.java:115)
+	at weblogic.servlet.internal.MuxableSocketHTTP.dispatch(MuxableSocketHTTP.java:323)
+	at weblogic.socket.MuxableSocketDiscriminator.dispatch(MuxableSocketDiscriminator.java:185)
+	at weblogic.socket.EPollSocketMuxer.dataReceived(EPollSocketMuxer.java:215)
+	at weblogic.socket.EPollSocketMuxer.processSockets(EPollSocketMuxer.java:177)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:43)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
